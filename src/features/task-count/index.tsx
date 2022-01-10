@@ -32,7 +32,7 @@ const TaskCount: FC = () => {
           ) : null}
         </Grid>
         {tasks.map((task, index) => (
-          <Grid key={task.pointsAwayFromGoal} item xs={12}>
+          <Grid key={`${task.pointsAwayFromGoal}-${index} `} item xs={12}>
             <Card>
               <CardHeader title={`${index + 1}: ${task.master}`} />
               <CardContent>
