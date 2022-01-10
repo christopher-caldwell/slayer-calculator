@@ -3,6 +3,6 @@ html {
   -ms-overflow-style: none; /* For Internet Explorer and Edge */
 }
 
-html::-webkit-scrollbar {
+*::-webkit-scrollbar {
   width: 0px; /* For Chrome, Safari, and Opera */
 }
