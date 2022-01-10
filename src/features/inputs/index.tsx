@@ -1,27 +1,19 @@
-import React, { FC } from 'react'
-// import { Button, styled } from '@mui/material'
+import { FC } from 'react'
 import { MuiForm } from '@caldwell619/mui-form-generator'
 
 import { Layout } from '@/components'
-import { inputs } from './config'
+import { generateInputs } from './config'
+import { useIsMobile } from '@/hooks'
 
-const PointsGoalForm: FC<Props> = () => (
-  <Layout>
-    <h2>Goal</h2>
-    <MuiForm inputs={inputs} />
-    {/* <CalculateButton variant='contained' size='large' onClick={onCalculate}>
-      Calculate
-    </CalculateButton> */}
-  </Layout>
-)
-
-// const CalculateButton = styled(Button)`
-//   width: 100%;
-//   margin-top: ${({ theme: { spacing } }) => spacing(3)};
-// `
-
-interface Props {
-  // onCalculate: () => void
+const PointsGoalForm: FC = () => {
+  const isMobile = useIsMobile()
+  const inputs = generateInputs(isMobile)
+  return (
+    <Layout>
+      <h2>Goal</h2>
+      <MuiForm inputs={inputs} />
+    </Layout>
+  )
 }
 
 export default PointsGoalForm

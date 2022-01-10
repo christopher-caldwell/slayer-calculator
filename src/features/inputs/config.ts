@@ -4,10 +4,11 @@ import { slayerMasters } from '@/constants'
 
 const slayerMastersAsOptions: SelectOption[] = slayerMasters.map(({ name }) => ({ label: name, value: name }))
 
-export const inputs: Config<PointsGoals>[] = [
+export const generateInputs = (isMobile: boolean): Config<PointsGoals>[] => [
   {
     type: 'text',
     config: {
+      textFieldProps: { type: 'tel' },
       control: {
         name: 'currentPoints',
         label: 'Current Points',
@@ -21,6 +22,7 @@ export const inputs: Config<PointsGoals>[] = [
   {
     type: 'text',
     config: {
+      textFieldProps: { type: 'tel' },
       control: {
         name: 'targetPoints',
         label: 'Target Points',
@@ -34,6 +36,7 @@ export const inputs: Config<PointsGoals>[] = [
   {
     type: 'text',
     config: {
+      textFieldProps: { type: 'tel' },
       control: {
         name: 'currentStreak',
         label: 'Current Task Streak',
@@ -51,7 +54,12 @@ export const inputs: Config<PointsGoals>[] = [
         name: 'chosenMaster',
         label: 'Slayer Master'
       },
-      options: slayerMastersAsOptions
+      options: slayerMastersAsOptions,
+      inputProps: {
+        SelectProps: {
+          native: isMobile
+        }
+      }
     }
   },
   {
