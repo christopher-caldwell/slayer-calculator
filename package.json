@@ -9,7 +9,7 @@
     "build": "tsc --noEmit && vite build",
     "analyze": "ANALYZE=true yarn build",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@caldwell619/mui-form-generator": "^0.0.3",
