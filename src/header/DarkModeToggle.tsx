@@ -46,7 +46,7 @@ const Ball = styled('div', {
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
-  background-image: url(/favicon.ico);
+  background-image: url(/slayer-calculator/favicon.ico);
   border-radius: 50%;
   position: absolute;
   top: 2px;
