@@ -2,6 +2,7 @@ import { FC, lazy } from 'react'
 import { Grid, styled } from '@mui/material'
 
 import Header from '@/header'
+import '@/styles/main.css'
 
 const PointsGoalForm = lazy(() => import('@/features/inputs'))
 const TaskCount = lazy(() => import('@/features/task-count'))
