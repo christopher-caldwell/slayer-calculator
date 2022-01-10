@@ -54,12 +54,7 @@ export const generateInputs = (isMobile: boolean): Config<PointsGoals>[] => [
         name: 'chosenMaster',
         label: 'Slayer Master'
       },
-      options: slayerMastersAsOptions,
-      inputProps: {
-        SelectProps: {
-          native: isMobile
-        }
-      }
+      options: slayerMastersAsOptions
     }
   },
   {
