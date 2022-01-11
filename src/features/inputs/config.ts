@@ -4,6 +4,8 @@ import { slayerMasters } from '@/constants'
 
 const slayerMastersAsOptions: SelectOption[] = slayerMasters.map(({ name }) => ({ label: name, value: name }))
 
+const NumericOnlyRegEx = new RegExp(/^[0-9]+$/)
+
 export const generateInputs = (isMobile: boolean): Config<PointsGoals>[] => [
   {
     type: 'text',
@@ -17,7 +19,7 @@ export const generateInputs = (isMobile: boolean): Config<PointsGoals>[] => [
         label: 'Current Points',
         rules: {
           pattern: {
-            value: /^[0-9]+/,
+            value: NumericOnlyRegEx,
             message: 'Must be a number'
           },
           required: true
@@ -34,7 +36,7 @@ export const generateInputs = (isMobile: boolean): Config<PointsGoals>[] => [
         label: 'Target Points',
         rules: {
           pattern: {
-            value: /^[0-9]+/,
+            value: NumericOnlyRegEx,
             message: 'Must be a number'
           },
           required: true
@@ -51,7 +53,7 @@ export const generateInputs = (isMobile: boolean): Config<PointsGoals>[] => [
         label: 'Current Task Streak',
         rules: {
           pattern: {
-            value: /^[0-9]+/,
+            value: NumericOnlyRegEx,
             message: 'Must be a number'
           },
           required: true
