@@ -25,7 +25,7 @@ const createThemeHelper = (theme: 'dark' | 'light') => {
         main: brandColor
       },
       error: {
-        main: 'rgb(232, 51, 51)'
+        main: 'rgb(252, 211, 76)'
       },
       success: {
         main: 'rgb(76,175,80)'

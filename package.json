@@ -12,7 +12,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "@caldwell619/mui-form-generator": "^0.0.3",
+    "@caldwell619/mui-form-generator": "^0.0.4",
     "@caldwell619/react-hooks": "^0.0.6",
     "@emotion/react": "11.4.1",
     "@emotion/styled": "11.3.0",

@@ -23,7 +23,7 @@ const TaskCount: FC = () => {
       <Grid container spacing={2}>
         <Grid item>
           <h2>
-            <BrandColorText>{tasks.length}</BrandColorText> Tasks to meet goal
+            <BrandColorText>{tasks.length}</BrandColorText> Task{tasks.length === 1 ? '' : 's'} to meet goal
           </h2>
           {isUsingTuraelBoost ? (
             <h4>

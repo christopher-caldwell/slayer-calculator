@@ -11,7 +11,7 @@ ReactDOM.render(
     <ChosenThemeProvider>
       <ThemeProvider>
         <Suspense fallback={<CircularProgress />}>
-          <MuiFormProvider props={{ reValidateMode: 'onBlur' }}>
+          <MuiFormProvider props={{ mode: 'onBlur', reValidateMode: 'onChange' }}>
             <App />
           </MuiFormProvider>
         </Suspense>

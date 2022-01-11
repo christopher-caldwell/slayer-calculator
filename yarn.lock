@@ -1092,10 +1092,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@caldwell619/mui-form-generator@^0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@caldwell619/mui-form-generator/-/mui-form-generator-0.0.3.tgz#bc623c201036b2d7beb4c780f49216758d30d58f"
-  integrity sha512-YSrhhb1M4VlWDWC34wdrHfF7H7ObLQHO9VIw8Ctv3cRXUHI3G3HQbv52MOPKrjOid5pRoobAptgsS8kEuL0n3w==
+"@caldwell619/mui-form-generator@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@caldwell619/mui-form-generator/-/mui-form-generator-0.0.4.tgz#c35df2edfc03ec5360fd9ac6835ee065c5417168"
+  integrity sha512-hlkpsEoOd2BXU/bH6kumRlnETPLI/KwGhFEHhZe+B9k1RsPJ1Djo+sxJwiWFdEMDyHNM0eqciARc5SXHWAefog==
 
 "@caldwell619/react-hooks@^0.0.6":
   version "0.0.6"

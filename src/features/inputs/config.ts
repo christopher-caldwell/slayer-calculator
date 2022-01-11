@@ -8,12 +8,18 @@ export const generateInputs = (isMobile: boolean): Config<PointsGoals>[] => [
   {
     type: 'text',
     config: {
-      textFieldProps: { type: 'tel' },
+      textFieldProps: {
+        type: 'tel',
+        required: true
+      },
       control: {
         name: 'currentPoints',
         label: 'Current Points',
         rules: {
-          pattern: /[0-9]/,
+          pattern: {
+            value: /^[0-9]+/,
+            message: 'Must be a number'
+          },
           required: true
         }
       }
@@ -22,12 +28,15 @@ export const generateInputs = (isMobile: boolean): Config<PointsGoals>[] => [
   {
     type: 'text',
     config: {
-      textFieldProps: { type: 'tel' },
+      textFieldProps: { type: 'tel', required: true },
       control: {
         name: 'targetPoints',
         label: 'Target Points',
         rules: {
-          pattern: /[0-9]/,
+          pattern: {
+            value: /^[0-9]+/,
+            message: 'Must be a number'
+          },
           required: true
         }
       }
@@ -36,12 +45,15 @@ export const generateInputs = (isMobile: boolean): Config<PointsGoals>[] => [
   {
     type: 'text',
     config: {
-      textFieldProps: { type: 'tel' },
+      textFieldProps: { type: 'tel', required: true },
       control: {
         name: 'currentStreak',
         label: 'Current Task Streak',
         rules: {
-          pattern: /[0-9]/,
+          pattern: {
+            value: /^[0-9]+/,
+            message: 'Must be a number'
+          },
           required: true
         }
       }
@@ -50,9 +62,16 @@ export const generateInputs = (isMobile: boolean): Config<PointsGoals>[] => [
   {
     type: 'select',
     config: {
+      inputProps: { required: true },
       control: {
         name: 'chosenMaster',
-        label: 'Slayer Master'
+        label: 'Slayer Master',
+        rules: {
+          required: {
+            value: true,
+            message: 'Must choose a Slayer Master'
+          }
+        }
       },
       options: slayerMastersAsOptions
     }
