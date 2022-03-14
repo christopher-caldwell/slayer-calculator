@@ -73,27 +73,37 @@ const handleTuraelBoost = (
   while (mutablePoints <= targetPoints) {
     let pointsGained = 0
     mutableStreak++
-    if (mutableStreak % 10 === 0) {
-      const pointsToAdd = handleDiaryModifier(slayerMaster.pointsPer10thTask, diaryModifier)
-      mutablePoints += pointsToAdd
-      pointsGained = pointsToAdd
-    } else if (mutableStreak % 50 === 0) {
-      const pointsToAdd = handleDiaryModifier(slayerMaster.pointsPer50thTask, diaryModifier)
-      mutablePoints += pointsToAdd
-      pointsGained = pointsToAdd
-    } else if (mutableStreak % 100 === 0) {
-      const pointsToAdd = handleDiaryModifier(slayerMaster.pointsPer100thTask, diaryModifier)
+    if (mutableStreak % 1000 === 0) {
+      const pointsToAdd = handleDiaryModifier(slayerMaster.pointsPer1000thTask, diaryModifier)
       mutablePoints += pointsToAdd
       pointsGained = pointsToAdd
     } else if (mutableStreak % 250 === 0) {
       const pointsToAdd = handleDiaryModifier(slayerMaster.pointsPer250thTask, diaryModifier)
       mutablePoints += pointsToAdd
       pointsGained = pointsToAdd
-    } else if (mutableStreak % 1000 === 0) {
-      const pointsToAdd = handleDiaryModifier(slayerMaster.pointsPer1000thTask, diaryModifier)
+    } else if (mutableStreak % 100 === 0) {
+      const pointsToAdd = handleDiaryModifier(slayerMaster.pointsPer100thTask, diaryModifier)
+      mutablePoints += pointsToAdd
+      pointsGained = pointsToAdd
+    } else if (mutableStreak % 50 === 0) {
+      const pointsToAdd = handleDiaryModifier(slayerMaster.pointsPer50thTask, diaryModifier)
       mutablePoints += pointsToAdd
       pointsGained = pointsToAdd
     }
+    if (mutableStreak % 10 === 0) {
+      const pointsToAdd = handleDiaryModifier(slayerMaster.pointsPer10thTask, diaryModifier)
+      mutablePoints += pointsToAdd
+      pointsGained = pointsToAdd
+    }
+
+    tasks.push({
+      pointsGained,
+      newTotalAfterCompletion: mutablePoints,
+      newStreakAfterCompletion: mutableStreak,
+      pointsAwayFromGoal: targetPoints - mutablePoints < 0 ? 0 : targetPoints - mutablePoints,
+      master: pointsGained === 0 ? 'Turael' : slayerMaster.name
+    })
+  }
 
     tasks.push({
       pointsGained,
